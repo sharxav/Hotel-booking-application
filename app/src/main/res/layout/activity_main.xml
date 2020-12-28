@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Activities.MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Indigo"
+        app:titleTextColor="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
+        app:menu="@menu/search_menu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:background="#FAFAFA"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/pick_location"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:drawableTint="@android:color/black"
+            android:text="Choose Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_location_on_black_24dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_below="@id/linearLayout"
+        android:layout_above="@id/make_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/make_request"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="Reservation"
+        android:textStyle="bold"
+        android:background="@drawable/button_bg"
+        android:textAllCaps="false"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="Logout"
+        android:textStyle="bold"
+        android:background="@drawable/button_bg"
+        android:textAllCaps="false"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+</RelativeLayout>
